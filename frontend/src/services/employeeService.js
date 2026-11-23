@@ -7,7 +7,7 @@ const API_URL = "http://localhost:5000/api/employees";
  */
 export const fetchEmployees = async (search = "") => {
   const response = await axios.get(API_URL, {
-    params: { search },   // ✅ auto URL-encoding
+    params: { search }, 
   });
   return response.data;
 };

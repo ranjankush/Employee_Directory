@@ -6,12 +6,12 @@ import React, { useEffect, useState } from "react";
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
   const [localValue, setLocalValue] = useState(searchTerm);
 
-  // ✅ Sync parent state → local state
+  //  Sync parent state → local state
   useEffect(() => {
     setLocalValue(searchTerm);
   }, [searchTerm]);
 
-  // ✅ Debounce effect
+  //  Debounce effect
   useEffect(() => {
     const timer = setTimeout(() => {
       setSearchTerm(localValue);

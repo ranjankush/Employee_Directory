@@ -25,7 +25,7 @@ const parseBody = (req) => {
       }
     });
 
-    req.on("error", (err) => reject(err));
+    req.on("error", (err) =>  reject(err));
   });
 };
 
